@@ -4,25 +4,56 @@ using System.Collections.ObjectModel;
 using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
-using System.Windows;
 using GalaSoft.MvvmLight;
+using GalaSoft.MvvmLight.Command;
 
 namespace AjedrezWpf
 {
-    public partial class MainWindow : Window
+    public partial class MainWindow
     {
         public MainWindow()
         {
             InitializeComponent();
+            DataContext = ChessBoard.Instance;
+        }
+    }
 
-            var board = new ChessBoard();
-            DataContext = board;
-            board.Create();
+    public class MainMenu : ViewModelBase
+    {
+        private bool isOpen = true;
+        public bool IsOpen
+        {
+            get => isOpen;
+            set => Set(ref isOpen, value);
+        }
+
+        public MainMenu()
+        {
+            NewGameCommand = new RelayCommand(() => NewGame());
+            SaveCommand = new RelayCommand(() => Save(), () => ChessBoard.Instance.Squares.Any());
+        }
+
+        public RelayCommand NewGameCommand { get; }
+        public RelayCommand SaveCommand { get; }
+
+        private async Task NewGame()
+        {
+            IsOpen = false;
+            await Task.Delay(250);
+            await ChessBoard.Instance.Create();
+        }
+
+        private async Task Save()
+        {
+
         }
     }
 
     public class ChessBoard : ViewModelBase
     {
+        public static ChessBoard Instance { get; } = new ChessBoard();
+
+        public MainMenu MainMenu { get; } = new MainMenu();
         public ObservableCollection<Square> Squares { get; } = new ObservableCollection<Square>();
         public ObservableCollection<object> BlackPieces { get; } = new ObservableCollection<object>();
         public ObservableCollection<object> WhitePieces { get; } = new ObservableCollection<object>();
@@ -39,7 +70,7 @@ namespace AjedrezWpf
             }
         }
 
-        public bool WhitePlays => !BlackPlays;
+        public bool WhitePlays => !BlackPlays && !MainMenu.IsOpen;
 
         private Square selectedSquare;
         public Square SelectedSquare
@@ -54,13 +85,18 @@ namespace AjedrezWpf
 
         public async Task Create()
         {
-            foreach (var r in Enumerable.Range(1, 8))
-            {
-                await Task.Delay(1);
-                var isBlack = r % 2 == 1;
-                foreach (var c in Enumerable.Range(1, 8))
-                    Squares.Add(new Square { Row = r, Col = c, IsBlack = (isBlack = !isBlack) });
-            }
+            Movimientos.Clear();
+            SelectedSquare = null;
+            if (!Squares.Any())
+                foreach (var r in Enumerable.Range(1, 8))
+                {
+                    await Task.Delay(50);
+                    var isBlack = r % 2 == 1;
+                    foreach (var c in Enumerable.Range(1, 8))
+                        Squares.Add(new Square { Row = r, Col = c, IsBlack = (isBlack = !isBlack) });
+                }
+            else
+                Squares.ToList().ForEach(x => x.Piece = null);
 
             Square Square(int r, int c) => Squares.First(x => x.Row == r && x.Col == c);
 
@@ -69,13 +105,20 @@ namespace AjedrezWpf
                     .Select(x => x.Split(','))
                     .Select(x => (int.Parse(x[0]), int.Parse(x[1]), Enum.Parse<PieceTypes>(x[2]), bool.Parse(x[3])));
 
-            foreach (var p in pieces)
-                Square(p.Item1, p.Item2).Piece = new Piece { Type = p.Item3, IsBlack = p.Item4 };
+            var rnd = new Random();
 
-            RefreshPieceCount();
+            foreach (var p in pieces.OrderBy(x => rnd.Next()))
+            {
+                await Task.Delay(50);
+                Square(p.Item1, p.Item2).Piece = new Piece { Type = p.Item3, IsBlack = p.Item4 };
+            }
+
+            await RefreshPieceCount();
+
+            BlackPlays = Movimientos.Count % 2 != 0;
         }
 
-        private void RefreshPieceCount()
+        private async Task RefreshPieceCount()
         {
             WhitePieces.Clear();
             BlackPieces.Clear();
@@ -87,7 +130,11 @@ namespace AjedrezWpf
                        .OrderBy(x => x.Item2);
 
             foreach (var p in pieces)
-                (p.IsBlack ? BlackPieces : WhitePieces).Add(new { Type = p.Item2, Count = p.Item3 });
+            {
+                await Task.Delay(50);
+                (p.IsBlack ? BlackPieces : WhitePieces).Add(new { Type = p.Item2, Count = p.Item3, ImageSource = new Piece { Type = p.Item2, IsBlack = p.IsBlack }.ImageSource });
+            }
+                
         }
 
         public async Task OnSelectedSquareChanged(Square previousSquare, Square newSquare)
@@ -102,19 +149,20 @@ namespace AjedrezWpf
             {
                 Movimientos.Add(new Movimiento
                 {
-                    From = (previousSquare.Row, previousSquare.Col).ToString(),
-                    To = (newSquare.Row, newSquare.Col).ToString(),
-                    IsBlack = previousSquare.Piece.IsBlack,
-                    Type = previousSquare.Piece.Type
+                    From = previousSquare,
+                    To = newSquare,
+                    Piece = previousSquare.Piece,
                 });
+
+                var captures = newSquare.Piece != null;
 
                 newSquare.Piece = previousSquare.Piece;
                 previousSquare.Piece = null;
 
                 ClearMoveTargets();
                 BlackPlays = !BlackPlays;
-
-                RefreshPieceCount();
+                if (captures)
+                    await RefreshPieceCount();
             }
             else
             {
@@ -255,6 +303,8 @@ namespace AjedrezWpf
             get => piece;
             set => Set(ref piece, value);
         }
+
+        public string Name => $"{"abcdefgh"[Col-1]}{9 - Row}";
     }
 
     public class Piece : ObservableObject
@@ -269,10 +319,9 @@ namespace AjedrezWpf
 
     public class Movimiento
     {
-        public bool IsBlack { get; set; }
-        public PieceTypes Type { get; set; }
-        public string From { get; set; }
-        public string To { get; set; }
+        public Piece Piece { get; set; }
+        public Square From { get; set; }
+        public Square To { get; set; }
     }
 }
 
