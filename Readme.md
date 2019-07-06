@@ -1,6 +1,6 @@
 # Ajedrez en C# y WPF
 
-![Demo](Demo.gif "Demo")
+![Demo](Demo2.gif "Demo")
 
 ## Juego completo de Ajedrez implementado en SOLO 325 líneas de código C# 8.0 y 177 líneas de XAML usando WPF corriendo sobre .NET Core 3.0
 
