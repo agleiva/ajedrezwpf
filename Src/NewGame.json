@@ -1,0 +1,580 @@
+{
+  "Squares": [
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 1,
+        "ImageSource": "Img/Negro-Torre.png"
+      },
+      "Row": 1,
+      "Col": 1
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 2,
+        "ImageSource": "Img/Negro-Caballo.png"
+      },
+      "Row": 1,
+      "Col": 2
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 3,
+        "ImageSource": "Img/Negro-Alfil.png"
+      },
+      "Row": 1,
+      "Col": 3
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 4,
+        "ImageSource": "Img/Negro-Reina.png"
+      },
+      "Row": 1,
+      "Col": 4
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 5,
+        "ImageSource": "Img/Negro-Rey.png"
+      },
+      "Row": 1,
+      "Col": 5
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 3,
+        "ImageSource": "Img/Negro-Alfil.png"
+      },
+      "Row": 1,
+      "Col": 6
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 2,
+        "ImageSource": "Img/Negro-Caballo.png"
+      },
+      "Row": 1,
+      "Col": 7
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 1,
+        "ImageSource": "Img/Negro-Torre.png"
+      },
+      "Row": 1,
+      "Col": 8
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 0,
+        "ImageSource": "Img/Negro-Pe\u00F3n.png"
+      },
+      "Row": 2,
+      "Col": 1
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 0,
+        "ImageSource": "Img/Negro-Pe\u00F3n.png"
+      },
+      "Row": 2,
+      "Col": 2
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 0,
+        "ImageSource": "Img/Negro-Pe\u00F3n.png"
+      },
+      "Row": 2,
+      "Col": 3
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 0,
+        "ImageSource": "Img/Negro-Pe\u00F3n.png"
+      },
+      "Row": 2,
+      "Col": 4
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 0,
+        "ImageSource": "Img/Negro-Pe\u00F3n.png"
+      },
+      "Row": 2,
+      "Col": 5
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 0,
+        "ImageSource": "Img/Negro-Pe\u00F3n.png"
+      },
+      "Row": 2,
+      "Col": 6
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 0,
+        "ImageSource": "Img/Negro-Pe\u00F3n.png"
+      },
+      "Row": 2,
+      "Col": 7
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": true,
+        "Type": 0,
+        "ImageSource": "Img/Negro-Pe\u00F3n.png"
+      },
+      "Row": 2,
+      "Col": 8
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 3,
+      "Col": 1
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 3,
+      "Col": 2
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 3,
+      "Col": 3
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 3,
+      "Col": 4
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 3,
+      "Col": 5
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 3,
+      "Col": 6
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 3,
+      "Col": 7
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 3,
+      "Col": 8
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 4,
+      "Col": 1
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 4,
+      "Col": 2
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 4,
+      "Col": 3
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 4,
+      "Col": 4
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 4,
+      "Col": 5
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 4,
+      "Col": 6
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 4,
+      "Col": 7
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 4,
+      "Col": 8
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 5,
+      "Col": 1
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 5,
+      "Col": 2
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 5,
+      "Col": 3
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 5,
+      "Col": 4
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 5,
+      "Col": 5
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 5,
+      "Col": 6
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 5,
+      "Col": 7
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 5,
+      "Col": 8
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 6,
+      "Col": 1
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 6,
+      "Col": 2
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 6,
+      "Col": 3
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 6,
+      "Col": 4
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 6,
+      "Col": 5
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 6,
+      "Col": 6
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": null,
+      "Row": 6,
+      "Col": 7
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": null,
+      "Row": 6,
+      "Col": 8
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 0,
+        "ImageSource": "Img/Blanco-Pe\u00F3n.png"
+      },
+      "Row": 7,
+      "Col": 1
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 0,
+        "ImageSource": "Img/Blanco-Pe\u00F3n.png"
+      },
+      "Row": 7,
+      "Col": 2
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 0,
+        "ImageSource": "Img/Blanco-Pe\u00F3n.png"
+      },
+      "Row": 7,
+      "Col": 3
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 0,
+        "ImageSource": "Img/Blanco-Pe\u00F3n.png"
+      },
+      "Row": 7,
+      "Col": 4
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 0,
+        "ImageSource": "Img/Blanco-Pe\u00F3n.png"
+      },
+      "Row": 7,
+      "Col": 5
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 0,
+        "ImageSource": "Img/Blanco-Pe\u00F3n.png"
+      },
+      "Row": 7,
+      "Col": 6
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 0,
+        "ImageSource": "Img/Blanco-Pe\u00F3n.png"
+      },
+      "Row": 7,
+      "Col": 7
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 0,
+        "ImageSource": "Img/Blanco-Pe\u00F3n.png"
+      },
+      "Row": 7,
+      "Col": 8
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 1,
+        "ImageSource": "Img/Blanco-Torre.png"
+      },
+      "Row": 8,
+      "Col": 1
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 2,
+        "ImageSource": "Img/Blanco-Caballo.png"
+      },
+      "Row": 8,
+      "Col": 2
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 3,
+        "ImageSource": "Img/Blanco-Alfil.png"
+      },
+      "Row": 8,
+      "Col": 3
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 4,
+        "ImageSource": "Img/Blanco-Reina.png"
+      },
+      "Row": 8,
+      "Col": 4
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 5,
+        "ImageSource": "Img/Blanco-Rey.png"
+      },
+      "Row": 8,
+      "Col": 5
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 3,
+        "ImageSource": "Img/Blanco-Alfil.png"
+      },
+      "Row": 8,
+      "Col": 6
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": true,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 2,
+        "ImageSource": "Img/Blanco-Caballo.png"
+      },
+      "Row": 8,
+      "Col": 7
+    },
+    {
+      "IsValidMoveTarget": false,
+      "IsBlack": false,
+      "Piece": {
+        "IsBlack": false,
+        "Type": 1,
+        "ImageSource": "Img/Blanco-Torre.png"
+      },
+      "Row": 8,
+      "Col": 8
+    }
+  ]
+}
