@@ -23,7 +23,7 @@
     - `Cargar`: continuar una partida guardada
     - `Guardar`: guardar una partida para continuarla más tarde.
     - `Salir`: finaliza el juego.
-  - **SOLO 275 LINEAS DE C#**. 
+  - [**SOLO 275 LINEAS DE C#**](https://github.com/agleiva/ajedrezwpf/blob/master/Src/MainWindow.xaml.cs). 
   
 ### Detalles Visuales / UX:
   
