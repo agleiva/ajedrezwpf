@@ -1,0 +1,33 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+	<PropertyGroup>
+		<OutputType>WinExe</OutputType>
+		<TargetFramework>net6.0-windows</TargetFramework>
+		<UseWPF>true</UseWPF>
+		<ImplicitUsings>enable</ImplicitUsings>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<PackageReference Include="MahApps.Metro" Version="2.4.9" />
+		<PackageReference Include="MvvmGen" Version="1.1.2" />
+		<PackageReference Include="MvvmLightLibsStd10" Version="5.4.1.1" />
+		<PackageReference Include="Ookii.Dialogs.Wpf" Version="4.0.0" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Resource Include="Img\Negro-Alfil.png" />
+		<Resource Include="Img\Negro-Rey.png" />
+		<Resource Include="Img\Negro-Caballo.png" />
+		<Resource Include="Img\Negro-Peón.png" />
+		<Resource Include="Img\Negro-Reina.png" />
+		<Resource Include="Img\Negro-Torre.png" />
+		<Resource Include="Img\Blanco-Alfil.png" />
+		<Resource Include="Img\Blanco-Rey.png" />
+		<Resource Include="Img\Blanco-Caballo.png" />
+		<Resource Include="Img\Blanco-Peón.png" />
+		<Resource Include="Img\Blanco-Reina.png" />
+		<Resource Include="Img\Blanco-Torre.png" />
+		<Content Include="NewGame.json">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+</Project>
